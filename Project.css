@@ -1,0 +1,256 @@
+/* General Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 20px 0;
+  justify-content: center;
+}
+.navbar ul li {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  padding: 10px 25px;
+  transition: all 0.5s ease;
+}
+.navbar ul li a:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px white;
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 740px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(Img1.jpg) no-repeat center/cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+}
+.btn {
+  padding: 10px 30px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 15px;
+  margin: 10px;
+  transition: 0.5s ease;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 15px white;
+  font-weight: bold;
+}
+.resume {
+  text-align: center;
+  display: inline-block;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+#image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+#image img {
+  width: 350px;
+  height: 320px;
+  object-fit: cover;
+}
+#intro {
+  flex: 1;
+  text-align: justify;
+}
+#intro h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Portfolio Section */
+#portfolio {
+  padding: 40px 20px;
+  background-color: #111;
+  color: white;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px white;
+}
+.project-card a {
+  color: cyan;
+  text-decoration: none;
+}
+
+/* Skills Section */
+#skills {
+  background-color: #222;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+.skills {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.skills span {
+  background-color: #444;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Contact Section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+#form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#send {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease;
+}
+
+#send:hover {
+  box-shadow: 0 0 15px white;
+  color: black;
+}
+ 
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+  .heading {
+    font-size: 2rem;
+  }
+  #image {
+    flex-direction: column;
+    align-items: center;
+  }
+  #image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .btn {
+    width: 90%;
+    font-size: 1rem;
+  }
+  #form-control {
+    width: 100%;
+  }
+  .input, #send {
+    width: 100%;
+  }
+}
